@@ -8,11 +8,12 @@ import {
   View,
 } from 'react-native';
 
+import AppButton from '../components/AppButton';
 import colors from '../config/color';
 
 const image = {
   uri:
-    'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599028530939&di=a5b1ae4539eb36b04a7828da4d1a8d13&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20190312%2F7cc801ae589042958894c3c1e5921a76.jpeg',
+    'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599057491205&di=6e669b7300772affc19c8844114620c3&imgtype=0&src=http%3A%2F%2Fimage.suning.cn%2Fuimg%2Fsop%2Fcommodity%2F179368685017040423703886_x.jpg',
 };
 
 const logo = {
@@ -26,10 +27,10 @@ function HomeScreen(props) {
       <ImageBackground source={image} style={styles.image}>
         <View style={styles.logoContainer}>
           <Image source={logo} style={styles.logo} />
-          <Text style={styles.text}>This is the home screen.</Text>
+          <Text style={styles.text}>My React native Demo</Text>
         </View>
-        <View style={styles.loginButton} />
-        <View style={styles.signUpButton} />
+        <AppButton title="Login" color={colors.secondary} />
+        <AppButton title="SignUp" color={colors.primary} />
       </ImageBackground>
     </SafeAreaView>
   );
@@ -45,12 +46,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
-  loginButton: {
-    width: '100%',
-    height: 70,
-    backgroundColor: colors.primary,
-    borderRadius: 20,
-  },
   logo: {
     width: 100,
     height: 100,
@@ -65,12 +60,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
-  },
-  signUpButton: {
-    width: '100%',
-    height: 70,
-    backgroundColor: colors.secondary,
-    borderRadius: 20,
+    paddingVertical: 10,
   },
 });
 

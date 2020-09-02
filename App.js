@@ -19,7 +19,8 @@ import {StyleSheet, StatusBar} from 'react-native';
 
 // import Card from './Card';
 import HomeScreen from './screen/HomeScreen';
-// import CameraItemScreen from './screen/CameraItemScreen';
+import CameraItemScreen from './screen/CameraItemScreen';
+import AppButton from './components/AppButton';
 
 const App = () => {
   return (
