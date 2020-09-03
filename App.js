@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import {StyleSheet, StatusBar} from 'react-native';
+import {StyleSheet, StatusBar, SafeAreaView} from 'react-native';
 
 /* import {
   Header,
@@ -21,12 +21,36 @@ import {StyleSheet, StatusBar} from 'react-native';
 import HomeScreen from './screen/HomeScreen';
 import CameraItemScreen from './screen/CameraItemScreen';
 import AppButton from './components/AppButton';
+import Card from './Card';
+import ItemListScreen from './screen/ItemListScreen';
+import ListItem from './components/ListItem';
 
 const App = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <HomeScreen />
+      <SafeAreaView style={styles.container}>
+        <StatusBar barStyle="dark-content" />
+        {/*<Card
+          title="doorcamera"
+          description="¥198"
+          image={require('./assets/doorcamera.png')}
+        />
+        <Card
+          title="doorcamera"
+          description="¥159"
+          image={require('./assets/cardcamera.png')}
+        />
+        <Card
+          title="doorcamera"
+          description="¥298"
+          image={require('./assets/xxxxcamera.png')}
+        />*/}
+        <ListItem
+          title="Jingzheng Song"
+          description="song.jingz@northeastern.edu"
+          image={require('./assets/cardcamera.png')}
+        />
+      </SafeAreaView>
     </>
   );
 };

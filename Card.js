@@ -1,28 +1,37 @@
 import React from 'react';
-import {View, StyleSheet, Text, Image} from 'react-native';
+import {StyleSheet, Image, View} from 'react-native';
 
-function Card({title, image}) {
+import AppText from './components/AppText';
+import colors from './config/color';
+
+function Card({title, description, image}) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>{title}</Text>
+    <View style={styles.card}>
       <Image style={styles.image} source={image} />
+      <AppText>{title}</AppText>
+      <AppText>{description}</AppText>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  card: {
     flex: 1,
-    backgroundColor: 'dodgerblue',
+    borderRadius: 25,
+    backgroundColor: colors.white,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   text: {
     fontSize: 16,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
   image: {
-    width: 50,
-    height: 50,
+    height: 15,
+    width: 15,
     borderRadius: 25,
+    overflow: 'hidden',
   },
 });
 

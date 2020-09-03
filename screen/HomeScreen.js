@@ -29,8 +29,16 @@ function HomeScreen(props) {
           <Image source={logo} style={styles.logo} />
           <Text style={styles.text}>My React native Demo</Text>
         </View>
-        <AppButton title="Login" color={colors.secondary} />
-        <AppButton title="SignUp" color={colors.primary} />
+        <AppButton
+          title="Login"
+          color={colors.secondary}
+          onPress={() => console.log('Login Tapped!')}
+        />
+        <AppButton
+          title="SignUp"
+          color={colors.primary}
+          onPress={() => console.log('SignUp Tapped!')}
+        />
       </ImageBackground>
     </SafeAreaView>
   );
@@ -43,7 +51,7 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     resizeMode: 'contain',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   logo: {
@@ -57,10 +65,10 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#006633',
-    fontSize: 16,
+    fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'center',
-    paddingVertical: 10,
+    paddingVertical: 15,
   },
 });
 
