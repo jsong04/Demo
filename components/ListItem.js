@@ -7,8 +7,8 @@ function ListItem({title, description, image}) {
     <View style={styles.container}>
       <Image style={styles.image} source={image} />
       <View>
-        <AppText>{title}</AppText>
-        <AppText>{description}</AppText>
+        {title && <AppText>{title}</AppText>}
+        {description && <AppText>{description}</AppText>}
       </View>
     </View>
   );

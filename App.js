@@ -24,6 +24,7 @@ import AppButton from './components/AppButton';
 import Card from './Card';
 import ItemListScreen from './screen/ItemListScreen';
 import ListItem from './components/ListItem';
+import AccountScreen from './screen/AccountScreen';
 
 const App = () => {
   return (
@@ -45,7 +46,7 @@ const App = () => {
           description="¥298"
           image={require('./assets/xxxxcamera.png')}
         />*/}
-        <ItemListScreen />
+        <AccountScreen />
       </SafeAreaView>
     </>
   );
