@@ -7,7 +7,19 @@ import Card from '../Card';
 function ItemListScreen(props) {
   return (
     <ScrollView style={styles.container}>
-      <AppText>Scroll me plz</AppText>
+      <AppText>我的设备</AppText>
+      <View style={styles.imageContainer}>
+        <Card
+          title="可视门铃2"
+          description="¥298"
+          image={require('../assets/doorcamera.png')}
+        />
+        <Card
+          title="abc"
+          description="¥298"
+          image={require('../assets/doorcamera.png')}
+        />
+      </View>
       <View style={styles.imageContainer}>
         <Card
           title="abc"
@@ -20,7 +32,6 @@ function ItemListScreen(props) {
           image={require('../assets/doorcamera.png')}
         />
       </View>
-      <AppText>If you like</AppText>
       <View style={styles.imageContainer}>
         <Card
           title="abc"
@@ -33,7 +44,6 @@ function ItemListScreen(props) {
           image={require('../assets/doorcamera.png')}
         />
       </View>
-      <AppText>Scrolling down</AppText>
       <View style={styles.imageContainer}>
         <Card
           title="abc"
@@ -46,7 +56,6 @@ function ItemListScreen(props) {
           image={require('../assets/doorcamera.png')}
         />
       </View>
-      <AppText>What's the best</AppText>
       <View style={styles.imageContainer}>
         <Card
           title="abc"
@@ -59,7 +68,6 @@ function ItemListScreen(props) {
           image={require('../assets/doorcamera.png')}
         />
       </View>
-      <AppText>Framework around?</AppText>
       <View style={styles.imageContainer}>
         <Card
           title="abc"
@@ -72,7 +80,6 @@ function ItemListScreen(props) {
           image={require('../assets/doorcamera.png')}
         />
       </View>
-      <AppText>React Native</AppText>
     </ScrollView>
   );
 }
@@ -84,8 +91,6 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     flexDirection: 'row',
-    paddingHorizontal: 10,
-    backgroundColor: 'blue',
   },
 });
 

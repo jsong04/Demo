@@ -45,11 +45,7 @@ const App = () => {
           description="¥298"
           image={require('./assets/xxxxcamera.png')}
         />*/}
-        <ListItem
-          title="Jingzheng Song"
-          description="song.jingz@northeastern.edu"
-          image={require('./assets/cardcamera.png')}
-        />
+        <ItemListScreen />
       </SafeAreaView>
     </>
   );
