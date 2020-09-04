@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
+import {Formik} from 'formik';
 
 import AppText from './AppText';
 import colors from '../config/color';
@@ -9,7 +10,7 @@ function AppButton({title, color, onPress}) {
     <TouchableOpacity
       style={[styles.container, {backgroundColor: color}]}
       onPress={onPress}>
-      <AppText>{title}</AppText>
+      <AppText style={styles.text}>{title}</AppText>
     </TouchableOpacity>
   );
 }
@@ -23,6 +24,11 @@ const styles = StyleSheet.create({
     padding: 15,
     width: '100%',
     marginVertical: 10,
+  },
+  text: {
+    color: colors.white,
+    textTransform: 'uppercase',
+    fontWeight: 'bold',
   },
 });
 

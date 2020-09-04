@@ -25,29 +25,12 @@ import Card from './Card';
 import ItemListScreen from './screen/ItemListScreen';
 import ListItem from './components/ListItem';
 import AccountScreen from './screen/AccountScreen';
+import LoginScreen from './screen/LoginScreen';
 
 const App = () => {
   return (
     <>
-      <SafeAreaView style={styles.container}>
-        <StatusBar barStyle="dark-content" />
-        {/*<Card
-          title="doorcamera"
-          description="¥198"
-          image={require('./assets/doorcamera.png')}
-        />
-        <Card
-          title="doorcamera"
-          description="¥159"
-          image={require('./assets/cardcamera.png')}
-        />
-        <Card
-          title="doorcamera"
-          description="¥298"
-          image={require('./assets/xxxxcamera.png')}
-        />*/}
-        <AccountScreen />
-      </SafeAreaView>
+      <HomeScreen />
     </>
   );
 };

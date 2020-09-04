@@ -27,15 +27,15 @@ function HomeScreen(props) {
       <ImageBackground source={image} style={styles.image}>
         <View style={styles.logoContainer}>
           <Image source={logo} style={styles.logo} />
-          <Text style={styles.text}>My React native Demo</Text>
+          <Text style={styles.text}>我家</Text>
         </View>
         <AppButton
-          title="Login"
+          title="登录"
           color={colors.secondary}
           onPress={() => console.log('Login Tapped!')}
         />
         <AppButton
-          title="SignUp"
+          title="注册"
           color={colors.primary}
           onPress={() => console.log('SignUp Tapped!')}
         />
@@ -64,8 +64,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    color: '#006633',
-    fontSize: 25,
+    color: colors.gray,
+    fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
     paddingVertical: 15,

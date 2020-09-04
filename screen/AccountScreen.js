@@ -1,7 +1,8 @@
 import React from 'react';
-import {View, StyleSheet, FlatList, ScrollView} from 'react-native';
+import {View, StyleSheet, FlatList} from 'react-native';
 
 import ListItem from '../components/ListItem';
+import ListItemSeparator from '../components/ListItemSeparator';
 
 const items = [
   '消息中心',
@@ -19,7 +20,7 @@ const items = [
   '开发者选项',
 ];
 
-function AccountScreen(props) {
+function AccountScreen({onPress}) {
   return (
     <View style={styles.container}>
       <ListItem
@@ -31,6 +32,7 @@ function AccountScreen(props) {
         data={items}
         keyExtractor={(item) => item}
         renderItem={({item}) => <ListItem title={item} />}
+        ItemSeparatorComponent={ListItemSeparator}
       />
     </View>
   );

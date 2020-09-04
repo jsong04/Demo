@@ -1,25 +1,27 @@
 import React from 'react';
-import {View, StyleSheet, Image} from 'react-native';
+import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import AppText from './AppText';
 
-function ListItem({title, description, image}) {
+function ListItem({title, description, image, onPress}) {
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={image} />
-      <View>
-        {title && <AppText>{title}</AppText>}
-        {description && <AppText>{description}</AppText>}
+    <TouchableOpacity onPress={onPress}>
+      <View style={styles.container}>
+        <Image style={styles.image} source={image} />
+        <View>
+          {title && <AppText>{title}</AppText>}
+          {description && <AppText>{description}</AppText>}
+        </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    borderRadius: 25,
-    padding: 10,
-    margin: 10,
+    borderRadius: 15,
+    padding: 1,
+    margin: 5,
     backgroundColor: '#f5f5f5',
     alignItems: 'center',
   },

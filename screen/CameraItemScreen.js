@@ -14,10 +14,8 @@ const deleteButton = require('../assets/icon_delete_normal.png');
 function CameraItemScreen(props) {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.buttonContainer}>
-        <Image style={styles.closeButton} source={closeButton} />
-        <Image style={styles.deleteButton} source={deleteButton} />
-      </View>
+      <Image style={styles.closeButton} source={closeButton} />
+      <Image style={styles.deleteButton} source={deleteButton} />
       <View style={styles.imageContainer}>
         <Image style={styles.image} source={image} />
       </View>
@@ -28,19 +26,15 @@ function CameraItemScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#006633',
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    top: 70,
+    backgroundColor: colors.gray,
   },
   closeButton: {
     width: 50,
     height: 50,
     alignItems: 'flex-start',
     position: 'absolute',
-    top: 40,
-    left: 40,
+    top: 50,
+    left: 30,
     backgroundColor: colors.secondary,
     borderRadius: 25,
   },
@@ -49,14 +43,15 @@ const styles = StyleSheet.create({
     height: 50,
     alignItems: 'flex-end',
     position: 'absolute',
-    top: 40,
-    right: 40,
-    backgroundColor: '#87cefa',
+    top: 50,
+    right: 30,
+    backgroundColor: colors.lightSkyBlue,
     borderRadius: 25,
   },
   image: {
     width: '100%',
-    height: '50%',
+    height: '60%',
+    resizeMode: 'cover',
   },
   imageContainer: {
     flex: 1,
