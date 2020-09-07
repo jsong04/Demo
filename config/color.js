@@ -6,4 +6,5 @@ export default {
   whiteSmoke: '#f5f5f5',
   gray: '#808080',
   lightSkyBlue: '#87cefa',
+  mediumseagreen: '#3cb371',
 };

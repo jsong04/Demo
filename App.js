@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import {StyleSheet, StatusBar, SafeAreaView} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 /* import {
   Header,
@@ -18,31 +18,17 @@ import {StyleSheet, StatusBar, SafeAreaView} from 'react-native';
 } from 'react-native/Libraries/NewAppScreen'; */
 
 // import Card from './Card';
-import HomeScreen from './screen/HomeScreen';
-import CameraItemScreen from './screen/CameraItemScreen';
-import AppButton from './components/AppButton';
-import Card from './Card';
-import ItemListScreen from './screen/ItemListScreen';
-import ListItem from './components/ListItem';
+
+import Screen from './components/Screen';
 import AccountScreen from './screen/AccountScreen';
 import LoginScreen from './screen/LoginScreen';
+import CameraItemScreen from './screen/CameraItemScreen';
+import ListingEditScreen from './screen/ListingEditScreen';
+import RegisterScreen from './screen/RegisterScreen';
+import {AppForm, AppFormField} from './components/forms';
 
 const App = () => {
-  return (
-    <>
-      <HomeScreen />
-    </>
-  );
+  return <RegisterScreen />;
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  text: {
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-});
 
 export default App;

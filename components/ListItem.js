@@ -1,17 +1,19 @@
 import React from 'react';
 import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
+
 import AppText from './AppText';
+import Screen from '../components/Screen';
 
 function ListItem({title, description, image, onPress}) {
   return (
     <TouchableOpacity onPress={onPress}>
-      <View style={styles.container}>
+      <Screen style={styles.container}>
         <Image style={styles.image} source={image} />
         <View>
-          {title && <AppText>{title}</AppText>}
-          {description && <AppText>{description}</AppText>}
+          {title && <AppText numberOfLines={1}>{title}</AppText>}
+          {description && <AppText numberOfLines={2}>{description}</AppText>}
         </View>
-      </View>
+      </Screen>
     </TouchableOpacity>
   );
 }

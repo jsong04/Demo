@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, StyleSheet, Image} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 
 import {Formik} from 'formik';
 import * as Yup from 'yup';
@@ -9,26 +9,19 @@ import colors from '../config/color';
 import AppFormField from '../components/forms/AppFormField';
 import {SubmitButton} from '../components/forms';
 
-const logo = {
-  uri:
-    'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3954992643,1884321385&fm=26&gp=0.jpg',
-};
-
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label('Email'),
   password: Yup.string().required().min(4).label('Password'),
 });
 
-function LoginScreen(props) {
+function RegisterScreen(props) {
   return (
     <Screen style={styles.container}>
-      <Image style={styles.logo} source={logo} />
-      <Text style={styles.tagline}>我家</Text>
       <Formik
         initialValues={{email: '', password: ''}}
         onsubmit={(values) => console.log(values)}
         validationSchema={validationSchema}>
-        {({handleChange, handleSubmit, errors, setFieldTouched, touched}) => (
+        {({handleSubmit}) => (
           <>
             <View style={styles.textContainer}>
               <AppFormField
@@ -50,7 +43,7 @@ function LoginScreen(props) {
             </View>
             <View style={styles.buttonContainer}>
               <SubmitButton
-                title="Login"
+                title="Register"
                 color={colors.mediumseagreen}
                 onPress={handleSubmit}
               />
@@ -66,24 +59,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  logo: {
-    width: 100,
-    height: 100,
-    alignSelf: 'center',
-    marginTop: 50,
-    marginBottom: 20,
-  },
-  tagline: {
-    textAlign: 'center',
-    fontWeight: '700',
-    color: colors.gray,
-  },
   textContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
     marginTop: 30,
   },
   buttonContainer: {
-    top: 20,
+    flex: 1,
   },
 });
 
-export default LoginScreen;
+export default RegisterScreen;

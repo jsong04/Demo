@@ -9,8 +9,10 @@ function Card({title, description, image}) {
     <View style={styles.card}>
       <Image style={styles.image} source={image} />
       <View style={styles.textContainer}>
-        <AppText>{title}</AppText>
-        <AppText style={styles.description}>{description}</AppText>
+        <AppText numberOfLines={1}>{title}</AppText>
+        <AppText style={styles.description} numberOfLines={2}>
+          {description}
+        </AppText>
       </View>
     </View>
   );
@@ -18,11 +20,10 @@ function Card({title, description, image}) {
 
 const styles = StyleSheet.create({
   card: {
-    height: 130,
-    flex: 1,
     borderRadius: 15,
     backgroundColor: colors.white,
-    margin: 8,
+    marginBottom: 20,
+    overflow: 'hidden',
   },
   text: {
     fontSize: 16,

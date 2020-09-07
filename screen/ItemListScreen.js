@@ -3,6 +3,7 @@ import {StyleSheet, ScrollView, View, FlatList} from 'react-native';
 
 import AppText from '../components/AppText';
 import Card from '../Card';
+import Screen from '../components/Screen';
 
 const items = [
   {
@@ -74,22 +75,24 @@ const items = [
 
 function ItemListScreen(props) {
   return (
-    <ScrollView style={styles.container}>
-      <AppText>我的设备</AppText>
-      <FlatList
-        data={items}
-        keyExtractor={(item) => item.title}
-        renderItem={({item}) => (
-          <View style={styles.imageContainer}>
-            <Card
-              title={item.title}
-              description={item.description}
-              image={require('../assets/doorcamera.png')}
-            />
-          </View>
-        )}
-      />
-    </ScrollView>
+    <Screen style={styles.container}>
+      <ScrollView>
+        <AppText>我的设备</AppText>
+        <FlatList
+          data={items}
+          keyExtractor={(item) => item.title}
+          renderItem={({item}) => (
+            <View style={styles.imageContainer}>
+              <Card
+                title={item.title}
+                description={item.description}
+                image={require('../assets/doorcamera.png')}
+              />
+            </View>
+          )}
+        />
+      </ScrollView>
+    </Screen>
   );
 }
 

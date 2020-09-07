@@ -1,6 +1,5 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
-import {Formik} from 'formik';
 
 import AppText from './AppText';
 import colors from '../config/color';
