@@ -26,9 +26,11 @@ import CameraItemScreen from './screen/CameraItemScreen';
 import ListingEditScreen from './screen/ListingEditScreen';
 import RegisterScreen from './screen/RegisterScreen';
 import {AppForm, AppFormField} from './components/forms';
+import ItemListScreen from './screen/ItemListScreen';
+import ItemDetailScreen from './screen/ItemDetailScreen';
 
 const App = () => {
-  return <RegisterScreen />;
+  return <ItemListScreen />;
 };
 
 export default App;

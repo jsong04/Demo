@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {View, StyleSheet, FlatList} from 'react-native';
 
 import ListItem from '../components/ListItem';
+import Screen from '../components/Screen';
 import ListItemSeparator from '../components/ListItemSeparator';
 
 const items = [
@@ -17,35 +18,41 @@ function AccountScreen(props) {
   const [refreshing, setRefreshing] = useState(false);
 
   return (
-    <View style={styles.container}>
-      <ListItem
-        title="宋京铮"
-        description="song.jingz@northeastern.edu"
-        image={require('../assets/Me.jpeg')}
-        onPress={() => console.log('User info')}
-      />
-      <FlatList
-        data={items}
-        keyExtractor={(item) => item.title}
-        renderItem={({item}) => (
-          <ListItem
-            title={item.title}
-            description={item.description}
-            onPress={() => console.log('pressed!!!')}
-          />
-        )}
-        ItemSeparatorComponent={ListItemSeparator}
-        refreshing={refreshing}
-        onRefresh={() => {
-          setRefreshing(false);
-        }}
-      />
-    </View>
+    <Screen>
+      <View style={styles.container}>
+        <ListItem
+          title="宋京铮"
+          description="song.jingz@northeastern.edu"
+          image={require('../assets/Me.jpeg')}
+          onPress={() => console.log('User info')}
+        />
+      </View>
+      <View style={styles.container}>
+        <FlatList
+          data={items}
+          keyExtractor={(item) => item.title}
+          renderItem={({item}) => (
+            <ListItem
+              title={item.title}
+              description={item.description}
+              onPress={() => console.log('pressed!!!')}
+            />
+          )}
+          ItemSeparatorComponent={ListItemSeparator}
+          refreshing={refreshing}
+          onRefresh={() => {
+            setRefreshing(false);
+          }}
+        />
+      </View>
+    </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    marginVertical: 40,
+  },
 });
 
 export default AccountScreen;

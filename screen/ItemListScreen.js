@@ -76,22 +76,21 @@ const items = [
 function ItemListScreen(props) {
   return (
     <Screen style={styles.container}>
-      <ScrollView>
-        <AppText>我的设备</AppText>
-        <FlatList
-          data={items}
-          keyExtractor={(item) => item.title}
-          renderItem={({item}) => (
-            <View style={styles.imageContainer}>
-              <Card
-                title={item.title}
-                description={item.description}
-                image={require('../assets/doorcamera.png')}
-              />
-            </View>
-          )}
-        />
-      </ScrollView>
+      <AppText>我的设备</AppText>
+      <FlatList
+        data={items}
+        numColumns={2}
+        keyExtractor={(item) => item.title}
+        renderItem={({item}) => (
+          <View style={styles.imageContainer}>
+            <Card
+              title={item.title}
+              description={item.description}
+              image={require('../assets/doorcamera.png')}
+            />
+          </View>
+        )}
+      />
     </Screen>
   );
 }
@@ -99,9 +98,10 @@ function ItemListScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    padding: 20,
   },
   imageContainer: {
+    flex: 1,
     flexDirection: 'row',
   },
 });
